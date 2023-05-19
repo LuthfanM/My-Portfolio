@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
-import { TbBrandTelegram, TbBrandTiktok } from "react-icons/tb";
+import { TbBrandTelegram, TbBrandTiktok, TbBrandWhatsapp } from "react-icons/tb";
 
 export default function Contact() {
   const sosmeds = [
@@ -10,15 +10,20 @@ export default function Contact() {
       icon: <FiGithub size={20} />,
       link: "https://github.com/AmienulRana",
     },
-    // {
-    //   name: "Telegram",
-    //   icon: <TbBrandTelegram size={20} />,
-    //   link: "https://t.me/amienul",
-    // },
+    {
+      name: "Telegram",
+      icon: <TbBrandTelegram size={20} />,
+      link: "https://t.me/amienulrana",
+    },
     {
       name: "Linkedin",
       icon: <FiLinkedin size={20} />,
       link: "https://www.linkedin.com/in/amienul-rana-704681218/",
+    },
+    {
+      name: "Whatsapp",
+      icon: <TbBrandWhatsapp size={20} />,
+      link: "https://api.whatsapp.com/send?phone=6285263856085",
     },
   ];
   return (
