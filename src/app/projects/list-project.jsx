@@ -58,12 +58,15 @@ export default function ListProject() {
           </div>
         ))}
       </div>
-      <button
-        onClick={shouldShowMore() ? handleShowMore : handleShowLess}
-        className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-      >
-        {shouldShowMore() ? "Show More" : "Show Less"}
-      </button>
+      {projects.length > numToShow && (
+        <button
+          onClick={shouldShowMore() ? handleShowMore : handleShowLess}
+          className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+        >
+          {shouldShowMore() ? "Show More" : "Show Less"}
+        </button>
+
+      )}
     </div>
   );
 }
