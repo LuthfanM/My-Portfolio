@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { ContentEducation } from "./content-education";
 import { ContentWorkExperience } from "./content-work-experience";
 
 export default function Experience() {
@@ -8,9 +7,7 @@ export default function Experience() {
 
   let selectedContent;
 
-  if (activeCategory === "education") {
-    selectedContent = <ContentEducation />;
-  } else if (activeCategory === "experience") {
+  if (activeCategory === "experience") {
     selectedContent = <ContentWorkExperience />;
   }
 
