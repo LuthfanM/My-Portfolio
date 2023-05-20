@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import ulin from "@images/ulin.webp";
 import { tools, stacks } from "@/utils/datas";
 import CardAbout from "@/components/card/card-about";
 import Experience from "./experience/experience";
