@@ -36,20 +36,36 @@ export default function Home() {
           Frontend developer based in Medan, Indonesia. Experienced in create &
           developing modern websites.
         </p>
-        <div
-          className="mt-10 text-sm md:mt-14"
-          data-aos="flip-up"
-          data-aos-duration="600"
-        >
-          <a
-            className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-            href="/images/my-cv.pdf"
-            target="_blank"
-            rel="noreferrer"
-            download={true}
+        <div className="flex items-center">
+          <div
+            className="mt-10 mr-3 text-sm md:mt-14"
+            data-aos="flip-up"
+            data-aos-duration="600"
           >
-            <button>View my cv here!</button>
-          </a>
+            <a
+              className="rounded-[4px] border-2 border-accent px-7 py-3 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+              href="/images/my-cv.pdf"
+              target="_blank"
+              rel="noreferrer"
+              download={true}
+            >
+              <button>View my cv here!</button>
+            </a>
+          </div>
+          <div
+            className="mt-10 text-sm md:mt-14"
+            data-aos="flip-up"
+            data-aos-duration="600"
+          >
+            <a
+              className="rounded-[4px] border-2 border-accent px-7 py-3 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+              href="https://www.fiverr.com/amienulrana"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>Order on Fiverr</button>
+            </a>
+          </div>
         </div>
       </div>
       <div className="flex h-[650px] w-full flex-col items-center justify-center py-24 text-center ">
