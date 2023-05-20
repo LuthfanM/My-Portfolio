@@ -18,7 +18,7 @@ export const experiences = [
     description: [
       "Develop and maintained web application systems for clients at Armada Vision",
       "Create reusable component for future use and improve quality code",
-      "Tech: Vue, Vuex, Express Js (Node Js), Mongodb",
+      "Tech: Vue, Vuex, Tailwind, Express Js, Mongodb",
     ],
   },
   {

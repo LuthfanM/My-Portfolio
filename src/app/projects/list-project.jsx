@@ -31,8 +31,9 @@ export default function ListProject() {
     setNumToShow(6);
   };
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="my-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-4 xl:grid-cols-3">
+    <div className="flex flex-col my-10 items-center justify-center">
+      <h1 className="text-2xl text-white text-center">Comming Soon...</h1>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-4 xl:grid-cols-3">
         {sortedData.slice(0, numToShow).map((data, index) => (
           <div
             key={data.id}
@@ -58,12 +59,15 @@ export default function ListProject() {
           </div>
         ))}
       </div>
-      <button
-        onClick={shouldShowMore() ? handleShowMore : handleShowLess}
-        className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-      >
-        {shouldShowMore() ? "Show More" : "Show Less"}
-      </button>
+      {projects.length > numToShow && (
+        <button
+          onClick={shouldShowMore() ? handleShowMore : handleShowLess}
+          className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+        >
+          {shouldShowMore() ? "Show More" : "Show Less"}
+        </button>
+
+      )}
     </div>
   );
 }

@@ -56,7 +56,7 @@ const stacks = {
     src: typescriptIcon,
     level: "Intermediate",
   },
-  Vue: { name: "Vue", src: vueIcon, level: "Intermediate" },
+  Vue: { name: "Vue", src: vueIcon, level: "Advanced" },
   Redux: { name: "Redux", src: reduxIcon, level: "Intermediate" },
   Graphql: { name: "Graphql", src: graphIcon, level: "Intermediate" },
 };
