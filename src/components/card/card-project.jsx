@@ -85,9 +85,9 @@ export default function CardProject(props) {
           </div>
         ) : null}
       </div>
-      <p className="max-h-[130px] min-h-[130px] overflow-auto text-sm text-primary">
+      {/* <p className="max-h-[130px] min-h-[130px] overflow-auto text-sm text-primary">
         {props.desc}
-      </p>
+      </p> */}
       <div className="mt-5 font-mono text-xs text-primary">{props.stack}</div>
     </div>
   );
