@@ -72,6 +72,16 @@ const projects = [
     stack: "HTML, CSS, JavaScript, Responsive Web Design",
     gif: "",
   },
+  {
+    id: 1,
+    name: "Topup Game",
+    desc: "",
+    image: topupgame,
+    web: "https://topupgame-pearl.vercel.app/",
+    repo: "https://github.com/AmienulRana/topupgame",
+    stack: "HTML, CSS, JavaScript, Responsive Web Design",
+    gif: "",
+  },
 ];
 
 export { tools, stacks, projects };
