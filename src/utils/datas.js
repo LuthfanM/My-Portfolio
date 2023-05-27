@@ -42,23 +42,23 @@ const tools = {
 };
 
 const stacks = {
-  HTML: { name: "HTML", src: htmlIcon, level: "Advanced" },
-  CSS: { name: "CSS", src: cssIcon, level: "Advanced" },
-  SASS: { name: "SASS", src: sassIcon, level: "Advanced" },
-  JS: { name: "Javascript", src: jsIcon, level: "Advanced" },
-  React: { name: "ReactJS", src: reactIcon, level: "Advanced" },
-  NextJS: { name: "NextJS", src: nextjsIcon, level: "Advanced" },
-  NodeJS: { name: "NodeJS", src: nodejsIcon, level: "Intermediate" },
-  Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Advanced" },
-  Tailwind: { name: "Tailwind", src: tailwindIcon, level: "Advanced" },
+  HTML: { name: "HTML", src: htmlIcon, level: "Language" },
+  CSS: { name: "CSS", src: cssIcon, level: "Language" },
+  SASS: { name: "SASS", src: sassIcon, level: "Language" },
+  JS: { name: "Javascript", src: jsIcon, level: "Language" },
+  React: { name: "ReactJS", src: reactIcon, level: "Libary" },
+  NextJS: { name: "NextJS", src: nextjsIcon, level: "Framework" },
+  NodeJS: { name: "NodeJS", src: nodejsIcon, level: "Runtime" },
+  Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Framework" },
+  Tailwind: { name: "Tailwind", src: tailwindIcon, level: "Framework" },
   Typescript: {
     name: "Typescript",
     src: typescriptIcon,
-    level: "Intermediate",
+    level: "Languange",
   },
-  Vue: { name: "Vue", src: vueIcon, level: "Advanced" },
-  Redux: { name: "Redux", src: reduxIcon, level: "Intermediate" },
-  Graphql: { name: "Graphql", src: graphIcon, level: "Intermediate" },
+  Vue: { name: "Vue", src: vueIcon, level: "Framework" },
+  Redux: { name: "Redux", src: reduxIcon, level: "State Mangement" },
+  Graphql: { name: "Graphql", src: graphIcon, level: "Query Language" },
 };
 
 const projects = [
