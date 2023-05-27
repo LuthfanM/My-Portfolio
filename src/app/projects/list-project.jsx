@@ -4,37 +4,18 @@ import CardProject from "@/components/card/card-project";
 import { projects } from "@/utils/datas";
 
 export default function ListProject() {
-  const [numToShow, setNumToShow] = useState(6);
   const [loading, setLoading] = useState([]);
 
   const dataArray = Object.keys(projects).map((key) => {
     return { id: key, ...projects[key] };
   });
 
-  const sortedData = dataArray.sort((a, b) => a.id < b.id).reverse();
 
-  const handleShowMore = () => {
-    setNumToShow(numToShow + 6);
-  };
-
-  useEffect(() => {
-    if (numToShow > sortedData.length) {
-      setNumToShow(sortedData.length);
-    }
-  }, [numToShow, sortedData.length]);
-
-  const shouldShowMore = () => {
-    return numToShow < sortedData.length;
-  };
-
-  const handleShowLess = () => {
-    setNumToShow(6);
-  };
   return (
     <div className="flex flex-col my-10 items-center justify-center">
       <h1 className="text-2xl text-white text-center">Comming Soon...</h1>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-4 xl:grid-cols-3">
-        {sortedData.slice(0, numToShow).map((data, index) => (
+        {dataArray.map((data, index) => (
           <div
             key={data.id}
             className="translate-y-0 cursor-pointer transition-all duration-300 hover:-translate-y-2"
@@ -59,15 +40,6 @@ export default function ListProject() {
           </div>
         ))}
       </div>
-      {projects.length > numToShow && (
-        <button
-          onClick={shouldShowMore() ? handleShowMore : handleShowLess}
-          className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-        >
-          {shouldShowMore() ? "Show More" : "Show Less"}
-        </button>
-
-      )}
     </div>
   );
 }
