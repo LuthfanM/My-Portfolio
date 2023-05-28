@@ -19,9 +19,6 @@ export default function About() {
               data-aos="fade-left"
               data-aos-duration="300"
             >
-              <span className="font-mono text-lg font-normal text-accent lg:text-xl">
-                02.{" "}
-              </span>
               About Me
             </h1>
             <div
