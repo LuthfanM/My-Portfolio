@@ -27,6 +27,8 @@ import healtyFood from "@images/landing page.png";
 import marketplace from "@images/marketplace.jpg";
 import topupgame from "@images/topupgame.png";
 import undanganDigital from "@images/undangan digital.png";
+import hris from '@images/hris.png'
+import carRental from '@images/car-rental.png';
 
 // Gif Images
 
@@ -64,12 +66,22 @@ const stacks = {
 const projects = [
   {
     id: 1,
+    name: "HRIS Management",
+    desc: "",
+    image: hris,
+    web: "",
+    repo: "",
+    stack: "Vue, Vuex, Express.js, Tailwind, Mongodb",
+    gif: "",
+  },
+  {
+    id: 10,
     name: "Marketplace",
     desc: "",
     image: marketplace,
     web: "https://marketplace-one-blue.vercel.app/",
     repo: "https://github.com/AmienulRana/marketplace",
-    stack: "Vue, Vuex, Express.js, Mongodb",
+    stack: "Vue, Vuex, Express.js, Mongodb, Tailwind",
     gif: "",
   },
   {
@@ -87,9 +99,19 @@ const projects = [
     name: "Invitation Digital",
     desc: "",
     image: undanganDigital,
-    web: "https://topupgame-pearl.vercel.app/",
-    repo: "https://github.com/AmienulRana/topupgame",
-    stack: "Next, Typescript, Express.js, Mongodb",
+    web: "",
+    repo: "",
+    stack: "React, Reactstrap, Express.js, Mongodb",
+    gif: "",
+  },
+  {
+    id: 11,
+    name: "Car Rental",
+    desc: "",
+    image: carRental,
+    web: "https://car-rental-ochre.vercel.app/",
+    repo: "https://github.com/AmienulRana/car-rental",
+    stack: "React, Sass",
     gif: "",
   },
   {
