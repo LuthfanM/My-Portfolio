@@ -55,7 +55,7 @@ export default function Experience() {
             </button>
           ))}
         </div>
-        <div className="h-[480px] w-[350px] overflow-auto md:w-[490.78px] lg:w-[600px]">
+        <div className="w-[350px] overflow-auto md:w-[490.78px] lg:w-[600px]">
           {selectedContent}
         </div>
       </div>
