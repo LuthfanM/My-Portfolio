@@ -65,7 +65,7 @@ export default function Home() {
           Frontend developer based in Medan, Indonesia. Experienced in create &
           developing modern websites.
         </p>
-        <div className="mt-4 flex items-center">
+        <div className="mt-4 flex items-center gap-4">
           {sosmeds.map((sosmed, index) => (
             <div
               key={index}
@@ -74,7 +74,7 @@ export default function Home() {
               data-aos-duration="600"
             >
               <div
-                className="mx-4 flex h-14 w-14 cursor-pointer items-center justify-center rounded-[50%] border-2 border-accent px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent"
+                className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-[50%] border-2 border-accent px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent"
                 title={sosmed.name}
               >
                 <a
