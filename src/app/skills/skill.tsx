@@ -2,7 +2,7 @@ import { tools, stacks } from "@/utils/datas";
 import CardAbout from "@/components/card/card-about";
 export default function Skill() {
   return (
-    <div>
+    <div className="mt-28">
       <div className="flex items-center gap-2 pb-12">
         <div
           className="h-[1px] w-12 bg-primary"
