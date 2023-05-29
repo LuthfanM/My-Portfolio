@@ -7,6 +7,7 @@ import {
   TbBrandTiktok,
   TbBrandWhatsapp,
 } from "react-icons/tb";
+import Skill from "./skills/skill";
 
 export const metadata = {
   title: "Amienul Rana",
@@ -120,6 +121,7 @@ export default function Home() {
       </div>
       <About />
       <Project />
+      <Skill />
     </div>
   );
 }
