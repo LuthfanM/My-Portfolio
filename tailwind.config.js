@@ -21,11 +21,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#9CA3AF",
+        primary: "#d3d9e3",
         secondary: "#E5E7EB",
-        accent: "#83DBFF",
-        base_col: "#111827",
-        base_col_darker: "#151E31",
+        accent: "#C6DEF4",
+        base_col: "#13093b",
+        base_col_darker: "#022602",
       },
       fontFamily: {
         sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],

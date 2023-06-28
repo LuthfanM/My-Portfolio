@@ -2,11 +2,18 @@ import { useState } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
 import LoadingSpinner from "../loading/loading-spinner";
+import "./CardProject.css";
+import { MIDDLE } from "../../helpers/constants";
 
 export default function CardProject(props) {
   const [hover, setHover] = useState(false);
   const { loading, setLoading } = props;
 
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
   const handleClick = (url) => {
     window.open(url, "_blank");
   };
@@ -18,13 +25,17 @@ export default function CardProject(props) {
   const handleMouseLeave = () => {
     setHover(false);
   };
-
+  console.log("props", props)
   return (
-    <div className="w-[330px] bg-accent/10 px-7 py-5 text-secondary transition-all hover:text-accent lg:w-[350px]">
+    <div
+      className={`card preseve relative grid max-h-fit w-1/3 rounded-sm border-2  border-white bg-accent/10 px-7 py-5 text-secondary transition-all hover:text-accent 
+      lg:w-[350px] ${isFlipped ? "flipped" : ""}`}
+      style={{ width: "auto" }}
+      onClick={handleFlip}
+    >
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold tracking-wide">{props.name}</h3>
-
-        <div className="flex cursor-pointer items-end gap-2 text-primary">
+        <div className="float-right flex cursor-pointer items-end gap-2 text-primary">
           {props.github && (
             <a
               href={props.github}
@@ -49,46 +60,43 @@ export default function CardProject(props) {
           )}
         </div>
       </div>
+      <div className="font-mono text-xs text-primary">{props.stack}</div>
+      {!isFlipped && (
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className="front relative my-2 flex flex-col items-center justify-center"
+        >
+          {props.image && (
+            <Image
+              src={props.image}
+              alt={props.name}
+              style={{ paddingRight: "inherit" }}
+              className={`m-auto h-[300px] w-full rounded-md object-cover ${
+                props.position == MIDDLE ? "object-center" : "object-left"
+              }`}
+            />
+          )}
+          {loading && (
+            <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-md bg-base_col_darker/60">
+              <LoadingSpinner />
+            </div>
+          )}
+        </div>
+      )}
       <div
-        onClick={() => {
-          handleClick(props.web ? props.web : props.github);
-        }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className="relative my-2 flex h-[180px] items-center justify-center"
+        className={`${
+          props.image ? (!isFlipped ? "hidden" : "back") : ""
+        } mt-4`}
       >
-        <Image
-          src={props.image}
-          alt={props.name}
-          className="m-auto h-full w-full rounded-md object-cover"
-        />
-        {hover ? (
-          <div className="absolute top-0 left-0 h-full w-full rounded-md ">
-            {props.gif && (
-              <Image
-                src={props.gif}
-                alt={props.name}
-                onLoad={() => setLoading(false)}
-                className="m-auto h-full rounded-md object-cover"
-              />
-            )}
-            <p className="absolute top-0 flex h-full w-full items-center justify-center bg-base_col_darker/60 text-white">
-              {props.gif && props.web && "Live Demo"}
-              {!props.gif && props.web && "Checkout Site"}
-              {!props.web && "Source Code"}
-            </p>
-            {loading && (
-              <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-md bg-base_col_darker/60">
-                <LoadingSpinner />
-              </div>
-            )}
-          </div>
-        ) : null}
+        <p
+          className={`relative ${
+            props.image ? "h-[300px] min-h-[130px]" : ""
+          } overflow-auto text-sm text-[#ffd3d3]`}
+        >
+          {props.desc}
+        </p>
       </div>
-      {/* <p className="max-h-[130px] min-h-[130px] overflow-auto text-sm text-primary">
-        {props.desc}
-      </p> */}
-      <div className="mt-5 font-mono text-xs text-primary">{props.stack}</div>
     </div>
   );
 }

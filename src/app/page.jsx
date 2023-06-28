@@ -1,17 +1,14 @@
 import About from "./about/about";
+import Experiences from "./experiences";
 import Project from "./projects/projects";
 import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
-import {
-  TbBrandGmail,
-  TbBrandTelegram,
-  TbBrandTiktok,
-  TbBrandWhatsapp,
-} from "react-icons/tb";
+import { TbBrandGmail, TbBrandWhatsapp, TbBrandTelegram } from "react-icons/tb";
 import Skill from "./skills/skill";
 
 export const metadata = {
-  title: "Amienul Rana",
-  description: "Amienul Rana is a Front-End software engineer enthusiast.",
+  title: "M Luthfan Mursyidan",
+  description:
+    "Luthfan is a Software Engineer. Stay Strong and Keep Learning, Luthfan!",
 };
 
 export default function Home() {
@@ -19,22 +16,22 @@ export default function Home() {
     {
       name: "Github",
       icon: <FiGithub size={24} />,
-      link: "https://github.com/AmienulRana",
+      link: "https://github.com/LuthfanM",
     },
     {
       name: "Telegram",
       icon: <TbBrandTelegram size={24} />,
-      link: "https://t.me/amienulrana",
+      link: "https://wa.me/6281906383181",
     },
     {
       name: "Linkedin",
       icon: <FiLinkedin size={24} />,
-      link: "https://www.linkedin.com/in/amienul-rana-704681218/",
+      link: "https://www.linkedin.com/in/muhammad-luthfan-mursyidan-1199785a/",
     },
     {
       name: "Gmail",
       icon: <TbBrandGmail size={24} />,
-      link: "mailto:amienulrana@gmail.com",
+      link: "mailto:mursyidanluthfan@gmail.com",
     },
   ];
   return (
@@ -50,20 +47,19 @@ export default function Home() {
           className="pb-1 text-4xl font-semibold text-secondary md:mt-0 md:pb-4 md:text-5xl lg:text-6xl"
           data-aos="fade-up"
         >
-          Amienul Rana.
+          M Luthfan Mursyidan.
         </h1>
         <h1
           className="pb-4 text-4xl font-semibold text-primary md:pb-8 md:text-5xl lg:text-6xl"
           data-aos="fade-up"
         >
-          I build things for the web.
+          I am a Fullstack Developer
         </h1>
         <p
           className="w-full text-sm leading-relaxed text-primary md:w-[540px] md:text-base"
           data-aos="zoom-in-up"
         >
-          Frontend developer based in Medan, Indonesia. Experienced in create &
-          developing modern websites.
+          Technology is too vast before you know it. Keep Learning Every Day
         </p>
         <div className="mt-4 flex items-center gap-4">
           {sosmeds.map((sosmed, index) => (
@@ -110,7 +106,7 @@ export default function Home() {
           >
             <a
               className="rounded-[4px] border-2 border-accent px-7 py-3 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-              href="https://www.fiverr.com/amienulrana"
+              href="https://www.fiverr.com/luthfans"
               target="_blank"
               rel="noreferrer"
             >
@@ -119,10 +115,14 @@ export default function Home() {
           </div> */}
         </div>
       </div>
-      <About />
-      <Project />
-      <Skill />
-      <div className="my-60 flex flex-col items-center justify-center gap-3 text-center md:gap-5">
+      <About id="aboutme" />
+      <Experiences id="experiences" />
+      <Project id="portfolio" />
+      <Skill id="aboutme" />
+      <div
+        id="whatnext"
+        className="my-60 flex flex-col items-center justify-center gap-3 text-center md:gap-5"
+      >
         <p className="font-mono text-accent" data-aos="fade-up">
           What{`'`}s Next?
         </p>
@@ -141,13 +141,22 @@ export default function Home() {
           would like to get in touch, please feel free to contact me. I will do
           my best to respond promptly.
         </p>
-        <button
-          className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-          data-aos="flip-up"
-          data-aos-duration="600"
-        >
-          <a href="mailto:amienulrana@gmail.com">Say Hello</a>
-        </button>
+        <div className="flex flex-row space-x-4">
+          <button
+            className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+            data-aos="flip-up"
+            data-aos-duration="600"
+          >
+            <a href="/images/my_cv.pdf" download="Luthfan M - CV.pdf">Download My CV</a>
+          </button>
+          <button
+            className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+            data-aos="flip-up"
+            data-aos-duration="600"
+          >
+            <a href="mailto:mursyidanluthfan@gmail.com">Say Hello</a>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -41,3 +41,34 @@ body {
     transform: scaleX(1);
   }
 }
+
+@layer utilities {
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .preseve{
+    transition: transform 0.8s;
+  transform-style: preserve-3d;
+  }
+
+  .hover\:rotate-y-180{    
+    transform: rotateY(180deg);
+  }
+
+  .bck-visibility-hidden{
+    backface-visibility: hidden;
+  }
+
+  .fbck{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  .unhover{
+    transform: rotateY(180deg);
+  }
+}

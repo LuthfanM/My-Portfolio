@@ -14,33 +14,46 @@ import gitIcon from "@icons/git.svg";
 import githubIcon from "@icons/github.svg";
 import vscodeIcon from "@icons/vscode.svg";
 import typescriptIcon from "@icons/typescript.svg";
-import vueIcon from "@icons/vue.svg";
 import reduxIcon from "@icons/redux.svg";
 import mongoIcon from "@icons/mongodb.svg";
 import graphIcon from "@icons/graphql.svg";
 import jestIcon from "@icons/jest.svg";
-import cypressIcon from "@icons/cypress.svg";
+import IconNestJS from "@icons/nestjs.svg";
+import javaIcon from "@icons/javas.svg";
+import golangIcon from "@icons/golang.svg";
+import knexIcon from "@icons/knex.svg";
+import laravelIcon from "@icons/laravel.svg";
+import mysqlIcon from "@icons/mysql.svg";
+import postgreIcon from "@icons/postgre.svg";
+import dockerIcon from "@icons/docker.svg";
 // Project Images
-import onlineShop from "@images/hefa store.png";
-import landingPage from "@images/landing page property.png";
-import healtyFood from "@images/landing page.png";
-import marketplace from "@images/marketplace.jpg";
-import topupgame from "@images/topupgame.png";
-import undanganDigital from "@images/undangan digital.png";
-import hris from '@images/hris.png'
-import carRental from '@images/car-rental.png';
+import creatella from "@images/creatella.png";
+import febilio from "@images/fabilio.png";
+import jenius from "@images/jenius.png";
+import boostCredit from "@images/boost_credit.png";
+import defrontier from "@images/defrontiers.png";
+import boostCreditCustomer from "@images/boost_credit_customer.png";
+import productList from "@images/product_list.png";
+import resto from "@images/resto.png";
+import emptyIdealogic from "@images/empty_idealogic.png";
+import filledIdealogic from "@images/filled_idealogic.png";
 
+import { LEFT } from "../helpers/constants";
+import { MIDDLE } from "../helpers/constants";
 // Gif Images
 
 const tools = {
   Git: { name: "Git", src: gitIcon, level: "Version control" },
   Github: { name: "Github", src: githubIcon, level: "Git hosting" },
   Mongodb: { name: "Mongodb", src: mongoIcon, level: "Database" },
+  MySQL: { name: "MySQL", src: mysqlIcon, level: "Database" },
+  PostgreSQL: { name: "PostgreSQL", src: postgreIcon, level: "Database" },
   NPM: { name: "NPM", src: npmIcon, level: "Package manager" },
   Yarn: { name: "Yarn", src: yarnIcon, level: "Dependency tool" },
   VSCode: { name: "VSCode", src: vscodeIcon, level: "Code editor" },
   Jest: { name: "Jest", src: jestIcon, level: "Unit test" },
-  Cypress: { name: "Cypress", src: cypressIcon, level: "E2E test" },
+  Docker: { name: "Docker", src: dockerIcon, level: "Container" },
+  Knex: { name: "KnexJS", src: knexIcon, level: "SQL Query Builder" },
 };
 
 const stacks = {
@@ -48,7 +61,7 @@ const stacks = {
   CSS: { name: "CSS", src: cssIcon, level: "Language" },
   SASS: { name: "SASS", src: sassIcon, level: "Language" },
   JS: { name: "Javascript", src: jsIcon, level: "Language" },
-  React: { name: "ReactJS", src: reactIcon, level: "Libary" },
+  React: { name: "ReactJS", src: reactIcon, level: "Library" },
   NextJS: { name: "NextJS", src: nextjsIcon, level: "Framework" },
   NodeJS: { name: "NodeJS", src: nodejsIcon, level: "Runtime" },
   Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Framework" },
@@ -56,92 +69,150 @@ const stacks = {
   Typescript: {
     name: "Typescript",
     src: typescriptIcon,
-    level: "Languange",
+    level: "Language",
   },
-  Vue: { name: "Vue", src: vueIcon, level: "Framework" },
-  Redux: { name: "Redux", src: reduxIcon, level: "State Mangement" },
+  Redux: { name: "Redux", src: reduxIcon, level: "State Management" },
+  NestJS: { name: "NestJS", src: IconNestJS, level: "Framework" },
+  Java: { name: "Java", src: javaIcon, level: "Language" },
+  Golang: { name: "Golang", src: golangIcon, level: "Language" },
+  Laravel: { name: "Laravel", src: laravelIcon, level: "Framework" },
   Graphql: { name: "Graphql", src: graphIcon, level: "Query Language" },
 };
 
 const projects = [
   {
     id: 1,
-    name: "HRIS Management",
-    desc: "",
-    image: hris,
+    name: "Defrontiers",
+    desc: "A Gaming main page interface",
+    image: defrontier,
     web: "",
-    repo: "",
-    stack: "Vue, Vuex, Express.js, Tailwind, Mongodb",
+    repo: "https://github.com/LuthfanM/frontier",
+    stack: "React, Next Js, Css, Html",
     gif: "",
-  },
-  {
-    id: 10,
-    name: "Marketplace",
-    desc: "",
-    image: marketplace,
-    web: "https://marketplace-one-blue.vercel.app/",
-    repo: "https://github.com/AmienulRana/marketplace",
-    stack: "Vue, Vuex, Express.js, Mongodb, Tailwind",
-    gif: "",
+    position: MIDDLE,
   },
   {
     id: 2,
-    name: "Topup Game",
+    name: "Febilio",
     desc: "",
-    image: topupgame,
-    web: "https://topupgame-pearl.vercel.app/",
-    repo: "https://github.com/AmienulRana/topupgame",
-    stack: "Next, Typescript, Express.js, Mongodb",
+    image: febilio,
+    web: "https://fabilio-test.vercel.app/",
+    repo: "https://github.com/LuthfanM/fabilioTest",
+    stack: "React, Css, Html, Javascript",
+    gif: "",
+    position: LEFT,
+  },
+  {
+    id: 2,
+    name: "Kreasi Indo",
+    desc: "Read data from file, sort the data then write the sorted value into new file",
+    image: undefined,
+    web: "",
+    repo: "https://github.com/LuthfanM/KreasiIndoTest",
+    stack: "Java",
     gif: "",
   },
   {
     id: 3,
-    name: "Invitation Digital",
-    desc: "",
-    image: undanganDigital,
+    name: "Jenius",
+    desc: "Crud application using react native (Mobile app) - (Minimum Css Design). This app created based on assigment from Jenius",
+    image: jenius,
     web: "",
-    repo: "",
-    stack: "React, Reactstrap, Express.js, Mongodb",
+    repo: "https://github.com/LuthfanM/JeniusCrudTest",
+    stack: "React Native",
     gif: "",
   },
   {
     id: 11,
-    name: "Car Rental",
-    desc: "",
-    image: carRental,
-    web: "https://car-rental-ochre.vercel.app/",
-    repo: "https://github.com/AmienulRana/car-rental",
-    stack: "React, Sass",
+    name: "Xapiens",
+    desc: "Login Form then display list of user based on specific API (No Css Design). This app created based on assigment from Xapiens",
+    image: undefined,
+    web: "",
+    repo: "https://github.com/LuthfanM/xapiensTes",
+    stack: "React, Html, Css, Rest Api",
     gif: "",
   },
   {
     id: 4,
-    name: "Furniture Landing Page",
-    desc: "",
-    image: landingPage,
-    web: "https://amienulrana.github.io/companyprofile/",
-    repo: "https://github.com/AmienulRana/companyprofile",
-    stack: "Html, Css, Javascript, Tailwind",
+    name: "Boost Credit",
+    desc: "A baseline template for fintech application. ",
+    image: boostCredit,
+    web: "",
+    repo: "https://github.com/LuthfanM/React_Template_Common",
+    stack: "React, Html, Css, Javascript, Tailwind",
     gif: "",
+    position: MIDDLE
   },
   {
     id: 5,
-    name: "Food Landing Page",
-    desc: "",
-    image: healtyFood,
-    web: "https://amienulrana.github.io/healthysalads/",
-    repo: "https://github.com/AmienulRana/healthysalads",
-    stack: "Html, Css, Javascript, Bootstrap",
+    name: "Cloe Customer",
+    desc: "Fintech application with useful components",
+    image: boostCreditCustomer,
+    web: "",
+    repo: "https://github.com/LuthfanM/React_Template_Customer",
+    stack: "React, Html, Css, Javascript, SCSS",
     gif: "",
   },
   {
     id: 6,
-    name: "Online Shop",
-    desc: "",
-    image: onlineShop,
-    web: "https://amienulrana.github.io/hefa-store/",
-    repo: "https://github.com/AmienulRana/online-shop",
-    stack: "Html, Css, Javascript, Bootstrap",
+    name: "Creatella Phase",
+    desc: "A Search and display list with implementation of emoji expression in search bar. This app created based on assigment from Creatella",
+    image: creatella,
+    web: "",
+    repo: "https://github.com/LuthfanM/createllaReactNative",
+    stack: "React Native, Javascript",
+    gif: "",
+  },
+  {
+    id: 7,
+    name: "Product List",
+    desc: "A displayed list with custom bottom navigation bar. This list can be clicked and display data based on the input",
+    image: productList,
+    web: "",
+    repo: "https://github.com/LuthfanM/RN-Product-List",
+    stack: "React Native, Javascript",
+    gif: "",
+  },
+  {
+    id: 8,
+    name: "Idealogic (Front End)",
+    desc: "A form with implemented hooks which update the price based on selected input from user dynamically. This app created based on assigment from Idealogic",
+    image: emptyIdealogic,
+    web: "",
+    repo: "https://github.com/LuthfanM/idealogic-fe",
+    stack: "React Js, HTML, Javascript",
+    gif: "",
+    position: MIDDLE
+  },
+  {
+    id: 9,
+    name: "Idealogic (Back End)",
+    desc: "Developed with Node js, displaying data from mysql then accessable as REST API. This app created based on assigment from Idealogic",
+    image: filledIdealogic,
+    web: "",
+    repo: "https://github.com/LuthfanM/idealogic-be",
+    stack: "Node Js, Mysql",
+    gif: "",
+    position: MIDDLE
+  },
+  {
+    id: 10,
+    name: "My Restaurant Recipe",
+    desc: "A simple restaurant app to display list, write menu, write recipe, write category of recipe. This app created based on assigment from TLAB",
+    image: resto,
+    web: "",
+    repo: "https://github.com/LuthfanM/My-Restaurant-Recipe",
+    stack: "React Js, HTML, Javascript",
+    gif: "",
+  },
+  {
+    id: 11,
+    name: "My Restaurant Recipe (Back End)",
+    desc: "Developed with Laravel Framework, displaying CRUD from PostgreSQL then accessable as REST API. This app created based on assigment from TLAB",
+    image: resto,
+    web: "",
+    repo: "https://github.com/LuthfanM/My-Restaurant-Recipe-BE",
+    stack: "PHP, Laravel, PostgreSQL",
     gif: "",
   },
 ];
