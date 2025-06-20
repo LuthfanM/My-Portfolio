@@ -27,16 +27,18 @@ import mysqlIcon from "@icons/mysql.svg";
 import postgreIcon from "@icons/postgre.svg";
 import dockerIcon from "@icons/docker.svg";
 // Project Images
-import creatella from "@images/creatella.png";
-import febilio from "@images/fabilio.png";
-import jenius from "@images/jenius.png";
-import boostCredit from "@images/boost_credit.png";
+import palmoil from "@images/palmoil.png";
+import palmoil_io_web from "@images/palmoil_io_web.png";
+import makemuuv_web from "@images/makemuuv_web.png";
+import passpass from "@images/passpass.png";
+import restaurant_pos from "@images/restaurant_pos.png";
 import defrontier from "@images/defrontiers.png";
 import boostCreditCustomer from "@images/boost_credit_customer.png";
-import productList from "@images/product_list.png";
-import resto from "@images/resto.png";
-import emptyIdealogic from "@images/empty_idealogic.png";
-import filledIdealogic from "@images/filled_idealogic.png";
+import monitopets from "@images/monitopets.png";
+
+import dailyAct from "@images/mobile/daily_act.png";
+import makemuuv_mobile from "@images/mobile/makemuuvs_mobile.png";
+import sentuhtanahku from "@images/mobile/sentuh_tanahku.png";
 
 import { LEFT } from "../helpers/constants";
 import { MIDDLE } from "../helpers/constants";
@@ -83,7 +85,7 @@ const projects = [
   {
     id: 1,
     name: "Defrontiers",
-    desc: "A Gaming main page interface",
+    desc: "A Landing page for gaming community called Defrontiers, showcasing the latest news and events",
     image: defrontier,
     web: "",
     repo: "https://github.com/LuthfanM/frontier",
@@ -93,128 +95,115 @@ const projects = [
   },
   {
     id: 2,
-    name: "Febilio",
-    desc: "",
-    image: febilio,
-    web: "https://fabilio-test.vercel.app/",
-    repo: "https://github.com/LuthfanM/fabilioTest",
-    stack: "React, Css, Html, Javascript",
+    name: "Monitopets",
+    desc: "Landing page for Pet Website. Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!",
+    image: monitopets,
+    web: "https://monito-pets-five.vercel.app/",
+    repo: "https://github.com/LuthfanM/MonitoPets",
+    stack: "React, CSS, Typescript",
     gif: "",
-    position: LEFT,
-  },
-  {
-    id: 2,
-    name: "Kreasi Indo",
-    desc: "Read data from file, sort the data then write the sorted value into new file",
-    image: undefined,
-    web: "",
-    repo: "https://github.com/LuthfanM/KreasiIndoTest",
-    stack: "Java",
-    gif: "",
+    position: MIDDLE,
   },
   {
     id: 3,
-    name: "Jenius",
-    desc: "Crud application using react native (Mobile app) - (Minimum Css Design). This app created based on assigment from Jenius",
-    image: jenius,
-    web: "",
-    repo: "https://github.com/LuthfanM/JeniusCrudTest",
-    stack: "React Native",
-    gif: "",
-  },
-  {
-    id: 11,
-    name: "Xapiens",
-    desc: "Login Form then display list of user based on specific API (No Css Design). This app created based on assigment from Xapiens",
-    image: undefined,
-    web: "",
-    repo: "https://github.com/LuthfanM/xapiensTes",
-    stack: "React, Html, Css, Rest Api",
-    gif: "",
-  },
-  {
-    id: 4,
-    name: "Boost Credit",
-    desc: "A baseline template for fintech application. ",
-    image: boostCredit,
-    web: "",
-    repo: "https://github.com/LuthfanM/React_Template_Common",
-    stack: "React, Html, Css, Javascript, Tailwind",
-    gif: "",
-    position: MIDDLE
-  },
-  {
-    id: 5,
-    name: "Cloe Customer",
-    desc: "Fintech application with useful components",
+    name: "CHLOE (Boost Credit Customer)",
+    desc: "Fintech application to apply loan, check loan status, and manage profile",
     image: boostCreditCustomer,
     web: "",
     repo: "https://github.com/LuthfanM/React_Template_Customer",
-    stack: "React, Html, Css, Javascript, SCSS",
+    stack: "NextJS, Tailwind",
+    gif: "",
+    position: MIDDLE,
+  },
+  {
+    id: 4,
+    name: "Restaurant POS System",
+    desc: "A Dashboard for restaurant to manage their menu, orders, and sales",
+    image: restaurant_pos,
+    web: "",
+    repo: "https://github.com/LuthfanM/Restaurant-POS-Demo",
+    stack: "NextJS, Tailwind, Typescript",
+    gif: "",
+    position: MIDDLE,
+  },
+  {
+    id: 5,
+    name: "Pass Pass",
+    desc: "A daily giveaway web application where users can participate in giveaways by take some participation steps such as following social media accounts, subscribing to newsletters, and sharing the giveaway on their own social media accounts.",
+    image: passpass,
+    web: "",
+    repo: "https://github.com/LuthfanM/PassPass",
+    stack: "NextJS, Tailwind, Typescript, Prisma",
     gif: "",
   },
   {
     id: 6,
-    name: "Creatella Phase",
-    desc: "A Search and display list with implementation of emoji expression in search bar. This app created based on assigment from Creatella",
-    image: creatella,
-    web: "",
-    repo: "https://github.com/LuthfanM/createllaReactNative",
-    stack: "React Native, Javascript",
+    name: "MakeMuuvs Web Application",
+    desc: "The MUUVS app is a healthy life tool for social interaction and adventurous explorations helping you get outside, connect with others and discover Life's Playground!",
+    image: makemuuv_web,
+    web: "https://www.makemuuvs.com/",
+    repo: "",
+    stack: "Laravel Inertia, React, Tailwind, Typescript",
     gif: "",
+    position: MIDDLE,
   },
   {
     id: 7,
-    name: "Product List",
-    desc: "A displayed list with custom bottom navigation bar. This list can be clicked and display data based on the input",
-    image: productList,
-    web: "",
-    repo: "https://github.com/LuthfanM/RN-Product-List",
-    stack: "React Native, Javascript",
+    name: "Palmoil IO Website",
+    desc: "Landing Page for Palmoil IO, a deforestation app to monitor and track deforestation activities in several countries, providing insights and data to help combat environmental issues.",
+    image: palmoil_io_web,
+    web: "https://palmoil.io/",
+    repo: "",
+    stack: "NextJS, Ghost, Typescript, Tailwind",
     gif: "",
+    position: MIDDLE,
   },
   {
     id: 8,
-    name: "Idealogic (Front End)",
-    desc: "A form with implemented hooks which update the price based on selected input from user dynamically. This app created based on assigment from Idealogic",
-    image: emptyIdealogic,
-    web: "",
-    repo: "https://github.com/LuthfanM/idealogic-fe",
-    stack: "React Js, HTML, Javascript",
+    name: "Palmoil IO Dashboard",
+    desc: "Deforestation App to monitor and track deforestation activities in several countries, providing insights and data to help combat environmental issues. You need to login in order to use this app",
+    image: palmoil,
+    web: "https://palmoil.io/dashboard",
+    repo: "",
+    stack:
+      "NextJS, Knex, PostgreSQL, DuckDB, Typescript, CSS, NodeJS, Mapbox, Monorepo",
     gif: "",
-    position: MIDDLE
-  },
-  {
-    id: 9,
-    name: "Idealogic (Back End)",
-    desc: "Developed with Node js, displaying data from mysql then accessable as REST API. This app created based on assigment from Idealogic",
-    image: filledIdealogic,
-    web: "",
-    repo: "https://github.com/LuthfanM/idealogic-be",
-    stack: "Node Js, Mysql",
-    gif: "",
-    position: MIDDLE
-  },
-  {
-    id: 10,
-    name: "My Restaurant Recipe",
-    desc: "A simple restaurant app to display list, write menu, write recipe, write category of recipe. This app created based on assigment from TLAB",
-    image: resto,
-    web: "",
-    repo: "https://github.com/LuthfanM/My-Restaurant-Recipe",
-    stack: "React Js, HTML, Javascript",
-    gif: "",
-  },
-  {
-    id: 11,
-    name: "My Restaurant Recipe (Back End)",
-    desc: "Developed with Laravel Framework, displaying CRUD from PostgreSQL then accessable as REST API. This app created based on assigment from TLAB",
-    image: resto,
-    web: "",
-    repo: "https://github.com/LuthfanM/My-Restaurant-Recipe-BE",
-    stack: "PHP, Laravel, PostgreSQL",
-    gif: "",
+    position: MIDDLE,
   },
 ];
 
-export { tools, stacks, projects };
+const mobileProjects = [
+  {
+    id: 1,
+    name: "Daily Activity",
+    desc: "Daily activity tracking app that allows users to log their daily activities, set goals, and track their progress over time. Also there is a group to share your daily activity with your friends",
+    image: dailyAct,
+    web: "",
+    repo: "https://github.com/LuthfanM/Daily-Notes",
+    stack: "Flutter, Supabase, Dart, Riverpod, Lottie",
+    gif: "",
+  },
+  {
+    id: 2,
+    name: "MakeMuuvs Mobile",
+    desc: "The MUUVS app is a healthy life tool for social interaction and adventurous explorations helping you get outside, connect with others and discover Life's Playground!",
+    image: makemuuv_mobile,
+    web: "",
+    repo: "",
+    stack: "React Native, Expo, Tailwind, Typescript, Google Maps",
+    gif: "",
+  },
+  {
+    id: 3,
+    name: "Sentuh Tanahku",
+    desc: "This app displays polygons based on specific areas defined by GeoJSON data and visualizes them on Google Maps. It replicates the functionality used by BPN (Badan Pertanahan Nasional) to monitor land ownership in Indonesia.",
+    image: sentuhtanahku,
+    web: "https://play.google.com/store/apps/details?id=id.go.bpn.sentuh&hl=id",
+    repo: "",
+    stack: "Kotlin, Google Maps",
+    gif: "",
+    position: MIDDLE,
+  },
+];
+
+export { tools, stacks, projects, mobileProjects };

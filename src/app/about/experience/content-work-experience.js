@@ -3,6 +3,20 @@ import { TbArrowBigRightLines } from "react-icons/tb";
 export const experiences = [
   {
     title: "Fullstack Developer",
+    company: "Maphubs, Inc.",
+    date: "October 2022 - Present",
+    description: [
+      "Develop monitoring application with integrated map",
+      "Create a web application using geospatial technology to monitor the world's natural resources",
+      "Create a mobile application to display data from current web application",
+      "Create feature to display deforestation, grievances, mills and plots in map",
+      "Create feature to display Indonesia jurisdiction area",
+      "Develop enterprise loan application using React",
+    ],
+    tech: "NextJS, Express, Tailwind, MapboxGL, PostgreSQL, Typescript, NodeJS, React, GraphQL",
+  },
+  {
+    title: "Fullstack Developer",
     company: "PT Boost Indonesia",
     date: "October 2021 - November 2022",
     description: [
