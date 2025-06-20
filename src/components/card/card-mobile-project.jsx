@@ -76,6 +76,11 @@ export default function CardMobileProject(props) {
           <p>{props.desc}</p>
         </div>
       </div>
+      {props.isPrivate && (
+        <div className="absolute bottom-3 right-3 rounded-md bg-red-600 px-4 py-2 text-xs font-semibold text-white shadow">
+          Private Repository
+        </div>
+      )}
     </div>
   );
 }

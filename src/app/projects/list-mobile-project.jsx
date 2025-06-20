@@ -39,6 +39,7 @@ export default function ListProjectMobile() {
               stack={data.stack}
               gif={data.gif}
               position={data.position}
+              isPrivate={data.isPrivate}
             />
           </div>
         ))}

@@ -125,6 +125,7 @@ const projects = [
     stack: "NextJS, Tailwind, Typescript",
     gif: "",
     position: MIDDLE,
+    isPrivate: true,
   },
   {
     id: 5,
@@ -135,6 +136,7 @@ const projects = [
     repo: "https://github.com/LuthfanM/PassPass",
     stack: "NextJS, Tailwind, Typescript, Prisma",
     gif: "",
+    isPrivate: true,
   },
   {
     id: 6,
@@ -146,6 +148,7 @@ const projects = [
     stack: "Laravel Inertia, React, Tailwind, Typescript",
     gif: "",
     position: MIDDLE,
+    isPrivate: true,
   },
   {
     id: 7,
@@ -157,6 +160,7 @@ const projects = [
     stack: "NextJS, Ghost, Typescript, Tailwind",
     gif: "",
     position: MIDDLE,
+    isPrivate: true,
   },
   {
     id: 8,
@@ -169,6 +173,7 @@ const projects = [
       "NextJS, Knex, PostgreSQL, DuckDB, Typescript, CSS, NodeJS, Mapbox, Monorepo",
     gif: "",
     position: MIDDLE,
+    isPrivate: true,
   },
 ];
 
@@ -182,6 +187,7 @@ const mobileProjects = [
     repo: "https://github.com/LuthfanM/Daily-Notes",
     stack: "Flutter, Supabase, Dart, Riverpod, Lottie",
     gif: "",
+    isPrivate: true,
   },
   {
     id: 2,
@@ -192,6 +198,7 @@ const mobileProjects = [
     repo: "",
     stack: "React Native, Expo, Tailwind, Typescript, Google Maps",
     gif: "",
+    isPrivate: true,
   },
   {
     id: 3,
@@ -203,6 +210,7 @@ const mobileProjects = [
     stack: "Kotlin, Google Maps",
     gif: "",
     position: MIDDLE,
+    isPrivate: true,
   },
 ];
 

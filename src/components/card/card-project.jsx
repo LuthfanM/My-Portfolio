@@ -25,7 +25,7 @@ export default function CardProject(props) {
   const handleMouseLeave = () => {
     setHover(false);
   };
-  console.log("props", props)
+  console.log("props", props);
   return (
     <div
       className={`card preseve relative grid max-h-fit w-1/3 rounded-sm border-2  border-white bg-accent/10 px-7 py-5 text-secondary transition-all hover:text-accent 
@@ -97,6 +97,11 @@ export default function CardProject(props) {
           {props.desc}
         </p>
       </div>
+      {props.isPrivate && (
+        <div className="absolute bottom-3 right-3 rounded-md bg-red-600 px-4 py-2 text-xs font-semibold text-white shadow">
+          Private Repository
+        </div>
+      )}
     </div>
   );
 }
