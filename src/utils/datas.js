@@ -35,6 +35,7 @@ import restaurant_pos from "@images/restaurant_pos.png";
 import defrontier from "@images/defrontiers.png";
 import boostCreditCustomer from "@images/boost_credit_customer.png";
 import monitopets from "@images/monitopets.png";
+import airBnbPropertyDetail from "@images/airbnb_property_detail.png";
 
 import dailyAct from "@images/mobile/daily_act.png";
 import makemuuv_mobile from "@images/mobile/makemuuvs_mobile.png";
@@ -171,6 +172,19 @@ const projects = [
     repo: "",
     stack:
       "NextJS, Knex, PostgreSQL, DuckDB, Typescript, CSS, NodeJS, Mapbox, Monorepo",
+    gif: "",
+    position: MIDDLE,
+    isPrivate: true,
+  },
+  {
+    id: 9,
+    name: "Air Bnb Property Detail Landing Page",
+    desc: "A responsove Air Bnb Property Detail using html and vanilla css.",
+    image: airBnbPropertyDetail,
+    web: "https://figment-assesment-template.vercel.app/",
+    repo: "",
+    stack:
+      "Vanilla HTML, CSS, JavaScript",
     gif: "",
     position: MIDDLE,
     isPrivate: true,
