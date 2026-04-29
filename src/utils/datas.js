@@ -40,6 +40,7 @@ import airBnbPropertyDetail from "@images/airbnb_property_detail.png";
 import dailyAct from "@images/mobile/daily_act.png";
 import makemuuv_mobile from "@images/mobile/makemuuvs_mobile.png";
 import sentuhtanahku from "@images/mobile/sentuh_tanahku.png";
+import courtReporting from "@images/courtflow_manager.png";
 
 import { LEFT } from "../helpers/constants";
 import { MIDDLE } from "../helpers/constants";
@@ -188,6 +189,19 @@ const projects = [
     gif: "",
     position: MIDDLE,
     isPrivate: true,
+  },
+  {
+    id: 10,
+    name: "Court Reporting Workflow",
+    desc: "A responsive court reporting workflow application.",
+    image: courtReporting,
+    web: "",
+    repo: "A simplified workflow system for managing transcription jobs",
+    stack:
+      "Vanilla HTML, CSS, JavaScript",
+    gif: "",
+    position: MIDDLE,
+    isPrivate: false,
   },
 ];
 
