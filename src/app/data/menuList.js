@@ -14,5 +14,10 @@ export const dataMenus = [
     {
         name: "What's Next?",
         link: "whatnext"
-    }    
+    },
+    {
+        name: "Privacy Policy",
+        link: "/privacy-policy",
+        type: "page"
+    }
 ]

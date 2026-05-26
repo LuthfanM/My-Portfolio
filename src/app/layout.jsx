@@ -1,4 +1,5 @@
 "use client";
+
 import "@/styles/globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,12 +16,14 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${roboto_mono.variable} scroll-smooth `}
+      className={`${poppins.variable} ${roboto_mono.variable} scroll-smooth`}
     >
       <head />
-      <body>
+      <body className="bg-base_col">
         <Navbar />
-        <div className="container mx-auto">{children}</div>
+
+        <main className="pt-24">{children}</main>
+
         <Footer />
       </body>
     </html>
