@@ -21,11 +21,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#d3d9e3",
-        secondary: "#E5E7EB",
-        accent: "#C6DEF4",
-        base_col: "#13093b",
-        base_col_darker: "#022602",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        base_col: "rgb(var(--color-base) / <alpha-value>)",
+        base_col_darker: "rgb(var(--color-base-darker) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],

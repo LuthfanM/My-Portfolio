@@ -2,8 +2,28 @@
 
 @import "tailwindcss";
 
+:root {
+  color-scheme: dark;
+  --color-base: 9 6 18;
+  --color-base-darker: 18 11 32;
+  --color-primary: 202 190 219;
+  --color-secondary: 250 247 255;
+  --color-accent: 139 92 246;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: dark;
+    --color-base: 9 6 18;
+    --color-base-darker: 18 11 32;
+    --color-primary: 202 190 219;
+    --color-secondary: 250 247 255;
+    --color-accent: 139 92 246;
+  }
+}
+
 body {
-  @apply bg-base_col;
+  @apply bg-base_col text-primary antialiased;
 }
 
 ::-webkit-scrollbar {
