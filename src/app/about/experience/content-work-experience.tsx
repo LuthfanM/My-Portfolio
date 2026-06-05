@@ -4,7 +4,7 @@ export const experiences = [
   {
     title: "Fullstack Developer",
     company: "Maphubs, Inc.",
-    date: "October 2022 - Present",
+    date: "October 2022 - October 2025",
     description: [
       "Develop monitoring application with integrated map",
       "Create a web application using geospatial technology to monitor the world's natural resources",

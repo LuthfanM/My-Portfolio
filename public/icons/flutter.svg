@@ -1,0 +1,6 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flutter">
+  <path d="M38 6 12 32l8 8L54 6H38Z" fill="#54c5f8"/>
+  <path d="m20 40 8 8 26-26H38L20 40Z" fill="#29b6f6"/>
+  <path d="m28 48 10 10h16L36 40l-8 8Z" fill="#01579b"/>
+  <path d="m28 48 8-8 8 8-8 8-8-8Z" fill="#40c4ff"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Cloud Run">
+  <rect width="64" height="64" rx="14" fill="#eef6ff"/>
+  <path d="M22 43h25a10 10 0 0 0-1-20 15 15 0 0 0-28 5 8 8 0 0 0 4 15Z" fill="#4285f4"/>
+  <path d="M27 23a15 15 0 0 1 19 0l-6 6a7 7 0 0 0-10 0l-3-6Z" fill="#34a853"/>
+  <path d="M18 28a8 8 0 0 0 4 15h8v-8H18a8 8 0 0 1 0-7Z" fill="#fbbc05"/>
+  <path d="M46 23a10 10 0 0 1 1 20h-8v-8h8a2 2 0 0 0 0-4l-1-8Z" fill="#ea4335"/>
+</svg>

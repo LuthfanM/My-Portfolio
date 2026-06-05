@@ -189,6 +189,47 @@ const skillGroups = [
   },
 ];
 
+const skillIconMap: Record<string, string> = {
+  React: "/icons/react.svg",
+  "React Native": "/icons/react.svg",
+  "Next.js": "/icons/nextjs.svg",
+  TypeScript: "/icons/typescript.svg",
+  JavaScript: "/icons/js.svg",
+  "Tailwind CSS": "/icons/tailwind.svg",
+  "Ant Design": "/icons/antd.svg",
+  MUI: "/icons/mui.svg",
+  "Inertia.js": "/icons/inertia.svg",
+  Flutter: "/icons/flutter.svg",
+  Expo: "/icons/expo.svg",
+  Laravel: "/icons/laravel.svg",
+  Go: "/icons/golang.svg",
+  Gin: "/icons/gin.svg",
+  "Node.js": "/icons/nodejs.svg",
+  "REST API": "/icons/rest-api.svg",
+  GraphQL: "/icons/graphql.svg",
+  PostgreSQL: "/icons/postgre.svg",
+  MySQL: "/icons/mysql.svg",
+  Supabase: "/icons/supabase.svg",
+  Firebase: "/icons/firebase.svg",
+  DuckDB: "/icons/duckdb.svg",
+  SQLite: "/icons/sqlite.svg",
+  Parquet: "/icons/parquet.svg",
+  "CSV processing": "/icons/csv.svg",
+  "Google Cloud Run": "/icons/google-cloud-run.svg",
+  "Cloud Tasks": "/icons/cloud-tasks.svg",
+  Firestore: "/icons/firestore.svg",
+  "Cloud Storage": "/icons/cloud-storage.svg",
+  Vercel: "/icons/vercel.svg",
+  Docker: "/icons/docker.svg",
+  GitHub: "/icons/github.svg",
+  GitLab: "/icons/gitlab.svg",
+  "Gemini API": "/icons/gemini.svg",
+  "AI transcription": "/icons/ai-transcription.svg",
+  "AI-assisted development": "/icons/ai-assisted-dev.svg",
+  "n8n concepts": "/icons/n8n.svg",
+  "Prompt-driven code generation": "/icons/prompt-code.svg",
+};
+
 const contactLinks = [
   {
     label: "Email",
@@ -242,6 +283,21 @@ function TechBadge({ children }: { children: React.ReactNode }) {
   return (
     <span className="rounded-full border border-primary/15 bg-secondary/5 px-3 py-1 text-xs font-medium text-primary">
       {children}
+    </span>
+  );
+}
+
+function SkillBadge({ skill }: { skill: string }) {
+  const iconSrc = skillIconMap[skill];
+
+  return (
+    <span className="inline-flex h-[100px] w-fit min-w-[104px] max-w-full flex-col items-center justify-center gap-3 rounded-lg border border-primary/15 bg-secondary/5 px-4 py-3 text-center text-xs font-medium text-primary">
+      {iconSrc ? (
+        <Image src={iconSrc} alt={`${skill} icon`} width={28} height={28} />
+      ) : (
+        <span aria-hidden="true" className="h-7 w-7" />
+      )}
+      <span className="max-w-full leading-5">{skill}</span>
     </span>
   );
 }
@@ -420,7 +476,7 @@ export default function Home() {
               </h3>
               <div className="mt-5 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
-                  <TechBadge key={skill}>{skill}</TechBadge>
+                  <SkillBadge key={skill} skill={skill} />
                 ))}
               </div>
             </article>
