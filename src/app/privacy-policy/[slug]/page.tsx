@@ -3,7 +3,9 @@ import {
   privacyPolicyMap,
   privacyPolicyMenus,
 } from "@/app/data/privacyPolicyMenus";
+
 import EchoFlowPolicy from "@/components/policy/EchoFlowPolicy";
+import ParkingFeePolicy from "@/components/policy/ParkingFeePolicy";
 
 export const metadata = {
   title: "Privacy Policy | M Luthfan Mursyidan",
@@ -18,6 +20,7 @@ export default async function PrivacyPolicyPage({ params }) {
   return (
     <PrivacyLayout sections={privacyPolicyMenus} activeLabel={policy.label}>
       {slug === "echo-flow" && <EchoFlowPolicy />}
+      {slug === "parking-fee" && <ParkingFeePolicy />}
     </PrivacyLayout>
   );
 }
