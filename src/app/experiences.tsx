@@ -1,9 +1,7 @@
 import React from "react";
 import Experience from "./about/experience/experience"
 
-export const metadata = {
-  title: "Experiences | M Luthfan Mursyidan",
-};
+export { metadata } from "@/helpers/constants/experiences-constants";
 
 const Experiences = ({id}) => {
   return (

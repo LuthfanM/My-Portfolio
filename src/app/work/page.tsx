@@ -1,35 +1,9 @@
 import Link from "next/link";
 import { FiArrowLeft, FiArrowUpRight } from "react-icons/fi";
-import { experiences } from "../about/experience/content-work-experience";
+import { experiences } from "@/helpers/constants/content-work-experience-constants";
+import { experienceMeta } from "@/helpers/constants/work-page-constants";
 
-export const metadata = {
-  title: "Work Experience | M Luthfan Mursyidan",
-  description:
-    "Professional work experience of M Luthfan Mursyidan across full-stack, frontend, mobile, geospatial, and fintech projects.",
-};
-
-const experienceMeta = {
-  "Maphubs, Inc.": {
-    location: "United States",
-    arrangement: "Remote",
-  },
-  "PT Boost Indonesia": {
-    location: "Indonesia",
-    arrangement: "Hybrid",
-  },
-  "PT Adi Consulting": {
-    location: "Indonesia",
-    arrangement: "On-site",
-  },
-  "PT Wirecard Indonesia": {
-    location: "Indonesia",
-    arrangement: "On-site",
-  },
-  "PT Xsis Mitra Utama": {
-    location: "Indonesia",
-    arrangement: "On-site",
-  },
-};
+export { metadata } from "@/helpers/constants/work-page-constants";
 
 function getMeta(company: string) {
   return (

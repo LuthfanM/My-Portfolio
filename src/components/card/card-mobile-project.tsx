@@ -3,7 +3,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
 import LoadingSpinner from "../loading/loading-spinner";
 import "./CardProject.css";
-import { MIDDLE } from "../../helpers/constants";
+import { MIDDLE } from "@/helpers/constants/base-constants";
 
 export default function CardMobileProject(props) {
   const [hover, setHover] = useState(false);

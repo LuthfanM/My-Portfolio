@@ -1,8 +1,6 @@
 import React from "react";
 
-export const metadata = {
-  title: "About | M Luthfan Mursyidan",
-};
+export { metadata } from "@/helpers/constants/about-constants";
 
 export default function About({id}) {
   return (

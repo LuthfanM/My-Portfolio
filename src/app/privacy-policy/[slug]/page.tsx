@@ -7,10 +7,7 @@ import {
 import EchoFlowPolicy from "@/components/policy/EchoFlowPolicy";
 import ParkingFeePolicy from "@/components/policy/ParkingFeePolicy";
 
-export const metadata = {
-  title: "Privacy Policy | M Luthfan Mursyidan",
-  description: "Privacy policy for M Luthfan Mursyidan portfolio website.",
-};
+export { metadata } from "@/helpers/constants/privacy-policy-page-constants";
 
 export default async function PrivacyPolicyPage({ params }) {
   const { slug } = await params;

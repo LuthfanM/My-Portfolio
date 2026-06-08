@@ -2,20 +2,12 @@ import { StaticImageData } from "next/image";
 import { mobileProjects, projects } from "@/utils/datas";
 import {
   Product,
-  ProductCategoryFilter,
   ProjectCategory,
   ProductSource,
 } from "./product-types";
+import { categories, PAGE_SIZE } from "@/helpers/constants/product-data-constants";
 
-export const PAGE_SIZE = 6;
-export const categories: ProductCategoryFilter[] = [
-  "All",
-  "Mobile",
-  "Web",
-  "Dashboard",
-  "Backend",
-  "SaaS",
-];
+export { categories, PAGE_SIZE } from "@/helpers/constants/product-data-constants";
 
 export function isUrl(value?: string) {
   return Boolean(value && /^https?:\/\//i.test(value));

@@ -1,257 +1,15 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import { FiArrowUpRight, FiDownload } from "react-icons/fi";
 import {
-  FiArrowUpRight,
-  FiDownload,
-  FiGithub,
-  FiLinkedin,
-  FiMail,
-} from "react-icons/fi";
-import { TbBrandWhatsapp } from "react-icons/tb";
-import palmoil from "@images/palmoil.png";
-import courtflow from "@images/courtflow_manager.png";
-import makemuuvMobile from "@images/mobile/makemuuvs_mobile.png";
+  buildCards,
+  contactLinks,
+  featuredProjects,
+  Project,
+  skillGroups,
+  skillIconMap,
+} from "@/helpers/constants/app-constants";
 
-export const metadata = {
-  title: "Luthfan Mursyidan | Frontend & Full-stack Engineer",
-  description:
-    "Portfolio of Luthfan Mursyidan, a frontend and full-stack engineer building practical web, mobile, and AI-powered products.",
-};
-
-type Project = {
-  name: string;
-  description: string;
-  stack: string[];
-  role: string;
-  highlights: string[];
-  image?: StaticImageData;
-  link?: string;
-  label?: string;
-};
-
-const featuredProjects: Project[] = [
-  {
-    name: "Echo Flow",
-    description:
-      "Mobile app for recording voice notes, uploading audio, and generating AI transcription, summaries, and important points.",
-    stack: [
-      "Flutter",
-      "Go",
-      "Gin",
-      "Firestore",
-      "Cloud Run",
-      "Cloud Tasks",
-      "Gemini API",
-    ],
-    role: "Mobile app, backend integration, auth flow, upload logic, and cloud processing architecture.",
-    highlights: [
-      "Guest and Google login",
-      "Audio recording and upload",
-      "Background AI transcription",
-      "Free/Pro plan limits",
-    ],
-    link: "https://play.google.com/store/apps/details?id=com.schenedev.echoflow",
-    label: "Case study",
-  },
-  {
-    name: "Palmoil.io Dashboard",
-    description:
-      "Deforestation monitoring dashboard for jurisdiction-level environmental data and map-based insights.",
-    stack: [
-      "React",
-      "Next.js",
-      "PostgreSQL",
-      "DuckDB",
-      "Mapbox",
-      "Geospatial data",
-    ],
-    role: "Frontend implementation, data workflows, dashboard features, and map/data visualization.",
-    highlights: [
-      "Geospatial data processing",
-      "Parquet and CSV generation",
-      "Jurisdiction-level data views",
-      "Map visualization",
-    ],
-    image: palmoil,
-    link: "https://palmoil.io/dashboard",
-    label: "View project",
-  },
-  {
-    name: "Parking Fee Tracker",
-    description:
-      "Fast local-first finance utility for logging parking fees with one-tap input and calendar-based history.",
-    stack: ["Flutter", "SQLite", "Material 3"],
-    role: "Product idea, mobile UI, local data model, and interaction flow.",
-    highlights: [
-      "One-tap fee recording",
-      "Vehicle type support",
-      "Calendar history",
-      "Local-first storage",
-    ],
-    label: "Product concept",
-  },
-  {
-    name: "Court Reporting Workflow",
-    description:
-      "Workflow system for managing court transcription jobs, review status, and operational handoffs.",
-    stack: ["HTML", "CSS", "JavaScript", "Responsive UI"],
-    role: "Interface design, workflow mapping, and frontend implementation.",
-    highlights: [
-      "Job management flow",
-      "Responsive dashboard",
-      "Status tracking",
-      "Operational screens",
-    ],
-    image: courtflow,
-    label: "Project sample",
-  },
-];
-
-const buildCards = [
-  {
-    title: "Web Applications",
-    body: "Modern dashboards, landing pages, SaaS interfaces, admin panels, and responsive web apps.",
-  },
-  {
-    title: "Mobile Applications",
-    body: "Flutter and React Native apps with authentication, local storage, API integration, and polished UI.",
-  },
-  {
-    title: "Backend APIs",
-    body: "REST APIs, authentication, background jobs, file upload pipelines, and cloud deployment.",
-  },
-  {
-    title: "AI-powered Features",
-    body: "Audio transcription, summarization, automation workflows, and AI-assisted product features.",
-  },
-  {
-    title: "Data & Geospatial Tools",
-    body: "Data processing scripts, CSV/Parquet generation, DuckDB workflows, and map-based features.",
-  },
-];
-
-const skillGroups = [
-  {
-    title: "Frontend",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "Tailwind CSS",
-      "Ant Design",
-      "MUI",
-      "Inertia.js",
-    ],
-  },
-  {
-    title: "Mobile",
-    skills: ["Flutter", "React Native", "Expo"],
-  },
-  {
-    title: "Backend",
-    skills: ["Laravel", "Go", "Gin", "Node.js", "REST API", "GraphQL"],
-  },
-  {
-    title: "Database & Data",
-    skills: [
-      "PostgreSQL",
-      "MySQL",
-      "Supabase",
-      "Firebase",
-      "DuckDB",
-      "SQLite",
-      "Parquet",
-      "CSV processing",
-    ],
-  },
-  {
-    title: "Cloud & Tools",
-    skills: [
-      "Google Cloud Run",
-      "Cloud Tasks",
-      "Firestore",
-      "Cloud Storage",
-      "Vercel",
-      "Docker",
-      "GitHub",
-      "GitLab",
-    ],
-  },
-  {
-    title: "AI / Automation",
-    skills: [
-      "Gemini API",
-      "AI transcription",
-      "AI-assisted development",
-      "n8n concepts",
-      "Prompt-driven code generation",
-    ],
-  },
-];
-
-const skillIconMap: Record<string, string> = {
-  React: "/icons/react.svg",
-  "React Native": "/icons/react.svg",
-  "Next.js": "/icons/nextjs.svg",
-  TypeScript: "/icons/typescript.svg",
-  JavaScript: "/icons/js.svg",
-  "Tailwind CSS": "/icons/tailwind.svg",
-  "Ant Design": "/icons/antd.svg",
-  MUI: "/icons/mui.svg",
-  "Inertia.js": "/icons/inertia.svg",
-  Flutter: "/icons/flutter.svg",
-  Expo: "/icons/expo.svg",
-  Laravel: "/icons/laravel.svg",
-  Go: "/icons/golang.svg",
-  Gin: "/icons/gin.svg",
-  "Node.js": "/icons/nodejs.svg",
-  "REST API": "/icons/rest-api.svg",
-  GraphQL: "/icons/graphql.svg",
-  PostgreSQL: "/icons/postgre.svg",
-  MySQL: "/icons/mysql.svg",
-  Supabase: "/icons/supabase.svg",
-  Firebase: "/icons/firebase.svg",
-  DuckDB: "/icons/duckdb.svg",
-  SQLite: "/icons/sqlite.svg",
-  Parquet: "/icons/parquet.svg",
-  "CSV processing": "/icons/csv.svg",
-  "Google Cloud Run": "/icons/google-cloud-run.svg",
-  "Cloud Tasks": "/icons/cloud-tasks.svg",
-  Firestore: "/icons/firestore.svg",
-  "Cloud Storage": "/icons/cloud-storage.svg",
-  Vercel: "/icons/vercel.svg",
-  Docker: "/icons/docker.svg",
-  GitHub: "/icons/github.svg",
-  GitLab: "/icons/gitlab.svg",
-  "Gemini API": "/icons/gemini.svg",
-  "AI transcription": "/icons/ai-transcription.svg",
-  "AI-assisted development": "/icons/ai-assisted-dev.svg",
-  "n8n concepts": "/icons/n8n.svg",
-  "Prompt-driven code generation": "/icons/prompt-code.svg",
-};
-
-const contactLinks = [
-  {
-    label: "Email",
-    href: "mailto:mursyidanluthfan@gmail.com",
-    icon: <FiMail />,
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/LuthfanM",
-    icon: <FiGithub />,
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/muhammad-luthfan-mursyidan-1199785a/",
-    icon: <FiLinkedin />,
-  },
-  {
-    label: "WhatsApp",
-    href: "https://wa.me/6281906383181",
-    icon: <TbBrandWhatsapp />,
-  },
-];
+export { metadata } from "@/helpers/constants/app-constants";
 
 function SectionHeader({
   eyebrow,
@@ -291,13 +49,19 @@ function SkillBadge({ skill }: { skill: string }) {
   const iconSrc = skillIconMap[skill];
 
   return (
-    <span className="inline-flex h-[100px] w-fit min-w-[104px] max-w-full flex-col items-center justify-center gap-3 rounded-lg border border-primary/15 bg-secondary/5 px-4 py-3 text-center text-xs font-medium text-primary">
+    <span className="flex min-h-12 w-full items-center gap-3 rounded-lg border border-primary/15 bg-secondary/5 px-3 py-2 text-left text-xs font-medium text-primary">
       {iconSrc ? (
-        <Image src={iconSrc} alt={`${skill} icon`} width={28} height={28} />
+        <Image
+          src={iconSrc}
+          alt={`${skill} icon`}
+          width={28}
+          height={28}
+          className="shrink-0"
+        />
       ) : (
-        <span aria-hidden="true" className="h-7 w-7" />
+        <span aria-hidden="true" className="h-7 w-7 shrink-0" />
       )}
-      <span className="max-w-full leading-5">{skill}</span>
+      <span className="min-w-0 leading-5">{skill}</span>
     </span>
   );
 }
@@ -474,7 +238,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-secondary">
                 {group.title}
               </h3>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-5 grid gap-2">
                 {group.skills.map((skill) => (
                   <SkillBadge key={skill} skill={skill} />
                 ))}
@@ -578,7 +342,7 @@ export default function Home() {
                 rel={link.href.startsWith("http") ? "noreferrer" : undefined}
                 className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-5 py-3 text-sm font-semibold text-secondary transition hover:border-accent hover:text-accent"
               >
-                {link.icon}
+                <link.icon />
                 {link.label}
               </a>
             ))}
