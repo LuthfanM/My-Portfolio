@@ -28,11 +28,11 @@ export function MobileProductsLayout({
               onClick={() => onSelectProduct(product.productId)}
               className={`w-[190px] shrink-0 overflow-hidden rounded-md border text-left transition ${
                 isSelected
-                  ? "border-accent bg-accent/15"
-                  : "border-primary/10 bg-secondary/[0.03]"
+                  ? "border-cyan-200/50 bg-cyan-200/[0.08]"
+                  : "border-white/10 bg-white/[0.035]"
               }`}
             >
-              <div className="relative h-28 bg-base_col_darker">
+              <div className="relative h-28 bg-black/40">
                 {product.image ? (
                   <Image
                     src={product.image}
@@ -60,7 +60,7 @@ export function MobileProductsLayout({
       </div>
 
       {selectedProduct ? (
-        <section className="mt-3 rounded-lg border border-primary/15 bg-base_col_darker/80 p-4">
+        <section className="mt-3 rounded-lg border border-white/10 bg-white/[0.035] p-4 shadow-[0_0_45px_rgba(14,165,233,0.06)] backdrop-blur-xl">
           {selectedProduct.category !== "Mobile" && (
             <ProductPreview product={selectedProduct} phoneMockup />
           )}
@@ -69,7 +69,7 @@ export function MobileProductsLayout({
           </div>
         </section>
       ) : (
-        <div className="rounded-lg border border-primary/15 p-6 text-sm text-primary">
+        <div className="rounded-lg border border-white/10 bg-white/[0.035] p-6 text-sm text-primary/80 backdrop-blur-xl">
           No projects found.
         </div>
       )}
@@ -100,7 +100,7 @@ export function DesktopProductsLayout({
 }) {
   return (
     <div className="hidden gap-6 lg:grid lg:grid-cols-[360px_1fr] xl:grid-cols-[420px_1fr]">
-      <aside className="rounded-lg border border-primary/15 bg-secondary/[0.03] p-4">
+      <aside className="rounded-lg border border-white/10 bg-white/[0.035] p-4 shadow-[0_0_45px_rgba(14,165,233,0.06)] backdrop-blur-xl">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-sm font-semibold text-secondary">Project List</h2>
           <span className="text-xs text-primary">
@@ -119,8 +119,8 @@ export function DesktopProductsLayout({
                 onClick={() => onSelectProduct(product.productId)}
                 className={`w-full rounded-md border p-4 text-left transition ${
                   isSelected
-                    ? "border-accent bg-accent/15 text-secondary"
-                    : "border-primary/10 bg-base_col/60 text-primary hover:border-accent/50 hover:text-secondary"
+                    ? "border-cyan-200/50 bg-cyan-200/[0.08] text-secondary"
+                    : "border-white/10 bg-black/25 text-primary/80 hover:border-cyan-200/40 hover:text-secondary"
                 }`}
               >
                 <span className="block text-sm font-semibold">
@@ -140,12 +140,12 @@ export function DesktopProductsLayout({
           )}
         </div>
 
-        <div className="mt-5 flex items-center justify-between gap-3 border-t border-primary/10 pt-4">
+        <div className="mt-5 flex items-center justify-between gap-3 border-t border-white/10 pt-4">
           <button
             type="button"
             onClick={() => onPageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="inline-flex h-10 items-center gap-2 rounded-md border border-primary/15 px-4 text-sm font-semibold text-secondary transition hover:border-accent hover:text-accent disabled:cursor-not-allowed disabled:opacity-40"
+            className="inline-flex h-10 items-center gap-2 rounded-md border border-white/15 px-4 text-sm font-semibold text-secondary transition hover:border-cyan-200/60 hover:text-cyan-100 disabled:cursor-not-allowed disabled:opacity-40"
           >
             <FiArrowLeft />
             Previous
@@ -154,7 +154,7 @@ export function DesktopProductsLayout({
             type="button"
             onClick={() => onPageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="inline-flex h-10 items-center gap-2 rounded-md border border-primary/15 px-4 text-sm font-semibold text-secondary transition hover:border-accent hover:text-accent disabled:cursor-not-allowed disabled:opacity-40"
+            className="inline-flex h-10 items-center gap-2 rounded-md border border-white/15 px-4 text-sm font-semibold text-secondary transition hover:border-cyan-200/60 hover:text-cyan-100 disabled:cursor-not-allowed disabled:opacity-40"
           >
             Next
             <FiArrowRight />
@@ -163,7 +163,7 @@ export function DesktopProductsLayout({
       </aside>
 
       {selectedProduct ? (
-        <section className="sticky top-28 rounded-lg border border-primary/15 bg-base_col_darker/80 p-4 shadow-2xl shadow-black/20 backdrop-blur md:p-6">
+        <section className="sticky top-28 rounded-lg border border-white/10 bg-white/[0.035] p-4 shadow-[0_0_55px_rgba(14,165,233,0.08)] backdrop-blur-xl md:p-6">
           {selectedProduct.category !== "Mobile" && (
             <ProductPreview product={selectedProduct} />
           )}
@@ -172,7 +172,7 @@ export function DesktopProductsLayout({
           </div>
         </section>
       ) : (
-        <div className="rounded-lg border border-primary/15 p-8 text-primary">
+        <div className="rounded-lg border border-white/10 bg-white/[0.035] p-8 text-primary/80 backdrop-blur-xl">
           No projects found.
         </div>
       )}

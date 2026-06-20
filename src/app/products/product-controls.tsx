@@ -20,8 +20,8 @@ export function ProductFilters({
           onClick={() => onCategoryChange(category)}
           className={`shrink-0 rounded-md border px-4 py-2 text-sm font-semibold transition ${
             activeCategory === category
-              ? "border-accent bg-accent text-white"
-              : "border-primary/15 bg-base_col_darker/70 text-secondary hover:border-accent hover:text-accent"
+              ? "border-cyan-200 bg-cyan-200 text-black"
+              : "border-white/10 bg-white/[0.035] text-secondary backdrop-blur-xl hover:border-cyan-200/60 hover:text-cyan-100"
           }`}
         >
           {category}
@@ -46,7 +46,7 @@ export function SearchField({
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder="Search project..."
-        className="h-12 w-full rounded-md border border-primary/15 bg-base_col_darker/80 pl-11 pr-4 text-sm text-secondary outline-none transition placeholder:text-primary/70 focus:border-accent"
+        className="h-12 w-full rounded-md border border-white/10 bg-white/[0.035] pl-11 pr-4 text-sm text-secondary outline-none backdrop-blur-xl transition placeholder:text-primary/60 focus:border-cyan-200/60"
       />
     </label>
   );

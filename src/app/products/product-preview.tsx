@@ -37,9 +37,9 @@ export function ProductPreview({
 
   if (phoneMockup) {
     return (
-      <div className="mx-auto w-full max-w-[270px] rounded-[2rem] border border-primary/20 bg-black p-3 shadow-2xl shadow-black/30">
+      <div className="mx-auto w-full max-w-[270px] rounded-[2rem] border border-white/15 bg-black/80 p-3 shadow-2xl shadow-black/30">
         <div className="mx-auto mb-3 h-1.5 w-16 rounded-full bg-primary/30" />
-        <div className="relative overflow-hidden rounded-[1.5rem] bg-base_col">
+        <div className="relative overflow-hidden rounded-[1.5rem] bg-black/40">
           {previewImages.length > 0 ? (
             <Image
               src={previewImages[activeImage]}
@@ -59,7 +59,7 @@ export function ProductPreview({
   }
 
   return (
-    <div className="relative overflow-hidden rounded-md border border-primary/10 bg-base_col">
+    <div className="relative overflow-hidden rounded-md border border-white/10 bg-black/35">
       {previewImages.length > 0 ? (
         <Image
           src={previewImages[activeImage]}
@@ -69,7 +69,7 @@ export function ProductPreview({
           priority
         />
       ) : (
-        <div className="flex h-[260px] items-center justify-center bg-secondary/[0.04] text-sm text-primary sm:h-[340px] lg:h-[430px]">
+        <div className="flex h-[260px] items-center justify-center bg-white/[0.035] text-sm text-primary sm:h-[340px] lg:h-[430px]">
           No preview image
         </div>
       )}
@@ -84,7 +84,7 @@ export function ProductPreview({
             type="button"
             aria-label="Previous preview image"
             onClick={goToPreviousImage}
-            className="grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur transition hover:border-accent hover:text-accent"
+            className="grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur transition hover:border-cyan-200 hover:text-cyan-100"
           >
             <FiArrowLeft />
           </button>
@@ -92,7 +92,7 @@ export function ProductPreview({
             type="button"
             aria-label="Next preview image"
             onClick={goToNextImage}
-            className="grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur transition hover:border-accent hover:text-accent"
+            className="grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur transition hover:border-cyan-200 hover:text-cyan-100"
           >
             <FiArrowRight />
           </button>
@@ -107,7 +107,7 @@ export function ProductPreview({
             aria-label={`Show preview image ${index + 1}`}
             onClick={() => setActiveImage(index)}
             className={`h-2.5 rounded-full transition ${
-              activeImage === index ? "w-8 bg-accent" : "w-2.5 bg-white/50"
+              activeImage === index ? "w-8 bg-cyan-200" : "w-2.5 bg-white/50"
             }`}
           />
         ))}

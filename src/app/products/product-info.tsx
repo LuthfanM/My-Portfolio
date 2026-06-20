@@ -12,13 +12,13 @@ export function ProductInfo({ product }: { product: Product }) {
 
   return (
     <div>
-      <p className="font-mono text-xs uppercase text-accent">
+      <p className="font-mono text-xs uppercase text-cyan-200">
         Selected Project
       </p>
       <h1 className="mt-3 text-3xl font-semibold leading-tight text-secondary md:text-4xl">
         {product.name}
       </h1>
-      <p className="mt-4 text-sm leading-7 text-primary">{product.desc}</p>
+      <p className="mt-4 text-sm leading-7 text-primary/80">{product.desc}</p>
 
       <div className="mt-6">
         <h2 className="text-sm font-semibold text-secondary">Tech stack</h2>
@@ -26,7 +26,7 @@ export function ProductInfo({ product }: { product: Product }) {
           {stackItems.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-medium text-secondary"
+              className="rounded-full border border-cyan-200/20 bg-cyan-200/[0.06] px-3 py-1 text-xs font-medium text-cyan-50"
             >
               {item}
             </span>
@@ -44,7 +44,7 @@ export function ProductInfo({ product }: { product: Product }) {
           }
         >
           {showHighlightImage && (
-            <div className="overflow-hidden rounded-md border border-primary/15 bg-base_col">
+            <div className="overflow-hidden rounded-md border border-white/10 bg-black/35">
               <Image
                 src={product.image}
                 alt={`${product.name} mobile preview`}
@@ -53,10 +53,10 @@ export function ProductInfo({ product }: { product: Product }) {
               />
             </div>
           )}
-          <ul className="grid gap-2 text-sm text-primary">
+          <ul className="grid gap-2 text-sm text-primary/80">
             {product.highlights.map((item) => (
               <li key={item} className="flex gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(103,232,249,0.8)]" />
                 <span>{item}</span>
               </li>
             ))}
@@ -70,7 +70,7 @@ export function ProductInfo({ product }: { product: Product }) {
             href={product.web}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent/80"
+            className="inline-flex items-center gap-2 rounded-md bg-cyan-200 px-4 py-2 text-sm font-semibold text-black transition hover:bg-cyan-100"
           >
             <FiExternalLink />
             Live Demo
@@ -81,14 +81,14 @@ export function ProductInfo({ product }: { product: Product }) {
             href={product.repo}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-primary/20 px-4 py-2 text-sm font-semibold text-secondary transition hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/[0.035] px-4 py-2 text-sm font-semibold text-secondary transition hover:border-cyan-200/60 hover:text-cyan-100"
           >
             <FiGithub />
             GitHub
           </a>
         )}
         {!isUrl(product.web) && !isUrl(product.repo) && (
-          <span className="rounded-md border border-primary/15 px-4 py-2 text-sm text-primary">
+          <span className="rounded-md border border-white/15 bg-white/[0.035] px-4 py-2 text-sm text-primary/80">
             Private project
           </span>
         )}

@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { FaArrowCircleUp } from 'react-icons/fa';
-import styles from './ScrollToTop.module.css';
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { FaArrowCircleUp } from "react-icons/fa";
+import styles from "./ScrollToTop.module.css";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,19 +16,23 @@ const ScrollToTopButton = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const handleScrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
-    <div className={`${styles['scroll-to-top-button']} 'block' `}>
+    <div className={styles["scroll-to-top-button"]}>
       <button onClick={handleScrollTop}>
         <FaArrowCircleUp />
       </button>

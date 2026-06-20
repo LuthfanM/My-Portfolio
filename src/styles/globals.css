@@ -26,6 +26,133 @@ body {
   @apply bg-base_col text-primary antialiased;
 }
 
+.web3-site-bg {
+  background-color: #02040a;
+  background-image:
+    radial-gradient(circle at 50% -8%, rgba(125, 211, 252, 0.24), transparent 30rem),
+    radial-gradient(circle at 18% 24%, rgba(14, 165, 233, 0.08), transparent 28rem),
+    radial-gradient(circle at 82% 18%, rgba(99, 102, 241, 0.08), transparent 30rem),
+    radial-gradient(circle, rgba(255, 255, 255, 0.78) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(125, 211, 252, 0.7) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.42) 0 1px, transparent 1.5px),
+    linear-gradient(180deg, #02040a 0%, #050711 48%, #02040a 100%);
+  background-position:
+    center top,
+    left top,
+    right top,
+    7% 34%,
+    82% 28%,
+    46% 64%,
+    center;
+  background-size:
+    auto,
+    auto,
+    auto,
+    9rem 11rem,
+    13rem 10rem,
+    17rem 15rem,
+    auto;
+  background-attachment: fixed;
+}
+
+.hero-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(125, 211, 252, 0.8) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.55) 0 1px, transparent 1.5px);
+  background-position:
+    7% 34%,
+    82% 28%,
+    46% 64%;
+  background-size:
+    9rem 11rem,
+    13rem 10rem,
+    17rem 15rem;
+  opacity: 0.38;
+}
+
+.hero-scan {
+  position: absolute;
+  top: 28%;
+  right: 0;
+  bottom: 22%;
+  left: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 100% 4px, 5rem 5rem;
+  opacity: 0.22;
+  mask-image: linear-gradient(to bottom, transparent, black 22%, black 72%, transparent);
+}
+
+.web3-section {
+  background: transparent;
+}
+
+.web3-section-alt {
+  background: transparent;
+}
+
+.web3-section::before,
+.web3-section-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 4.5rem 4.5rem;
+  mask-image: linear-gradient(to bottom, transparent, black 16%, black 84%, transparent);
+  opacity: 0.22;
+}
+
+.web3-section::after,
+.web3-section-alt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.78) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(125, 211, 252, 0.72) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.42) 0 1px, transparent 1.5px);
+  background-position:
+    9% 22%,
+    76% 18%,
+    48% 72%;
+  background-size:
+    11rem 13rem,
+    16rem 12rem,
+    19rem 17rem;
+  opacity: 0.18;
+  mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+}
+
+.web3-panel {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 0 45px rgba(14, 165, 233, 0.06);
+  backdrop-filter: blur(24px);
+}
+
+@keyframes aurora-drift {
+  from {
+    transform: translateX(-52%) skewX(-4deg);
+  }
+  to {
+    transform: translateX(-48%) skewX(4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-vortex {
+    animation: none;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }

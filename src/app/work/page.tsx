@@ -16,31 +16,31 @@ function getMeta(company: string) {
 
 export default function WorkPage() {
   return (
-    <main className="container mx-auto min-h-screen py-12 md:py-16">
+    <main className="container relative mx-auto min-h-screen py-12 md:py-16">
       <Link
         href="/"
-        className="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-accent"
+        className="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-primary/80 transition hover:text-cyan-100"
       >
         <FiArrowLeft />
         Back home
       </Link>
 
       <section>
-        <p className="font-mono text-xs uppercase tracking-[0.35em] text-primary/70">
+        <p className="font-mono text-xs uppercase tracking-[0.35em] text-cyan-200">
           Experience
         </p>
         <h1 className="mt-6 max-w-5xl text-5xl font-semibold leading-none text-secondary md:text-7xl">
           Places I&apos;ve worked
         </h1>
 
-        <div className="mt-16 border-y border-accent/15">
+        <div className="mt-16 overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] shadow-[0_0_45px_rgba(14,165,233,0.06)] backdrop-blur-xl">
           {experiences.map((experience) => {
             const meta = getMeta(experience.company);
 
             return (
               <article
                 key={`${experience.company}-${experience.date}`}
-                className="grid gap-4 border-b border-accent/15 py-8 last:border-b-0 md:grid-cols-[260px_1fr] md:gap-12"
+                className="grid gap-4 border-b border-white/10 px-6 py-8 last:border-b-0 md:grid-cols-[260px_1fr] md:gap-12"
               >
                 <h2 className="text-xl font-medium text-primary/70">
                   {experience.company}
@@ -50,9 +50,9 @@ export default function WorkPage() {
                     {experience.title}
                   </h3>
                   <p className="mt-5 font-mono text-sm uppercase tracking-[0.25em] text-primary/70">
-                    {meta.location} <span className="px-3 text-accent">•</span>
+                    {meta.location} <span className="px-3 text-cyan-200">•</span>
                     {meta.arrangement}
-                    <span className="px-3 text-accent">•</span>
+                    <span className="px-3 text-cyan-200">•</span>
                     {experience.date}
                   </p>
                 </div>
@@ -65,7 +65,7 @@ export default function WorkPage() {
       <section className="py-20">
         <div className="mb-8 flex items-end justify-between gap-6">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-200">
               Details
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-secondary md:text-5xl">
@@ -78,14 +78,14 @@ export default function WorkPage() {
           {experiences.map((experience) => (
             <article
               key={`${experience.company}-${experience.title}`}
-              className="rounded-lg border border-primary/15 bg-secondary/[0.03] p-6 md:p-8"
+              className="rounded-lg border border-white/10 bg-white/[0.035] p-6 shadow-[0_0_45px_rgba(14,165,233,0.06)] backdrop-blur-xl md:p-8"
             >
               <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h3 className="text-2xl font-semibold text-secondary">
                     {experience.title}
                   </h3>
-                  <p className="mt-2 text-sm font-semibold text-accent">
+                  <p className="mt-2 text-sm font-semibold text-cyan-200">
                     {experience.company}
                   </p>
                 </div>
@@ -94,16 +94,16 @@ export default function WorkPage() {
                 </p>
               </div>
 
-              <ul className="mt-6 grid gap-3 text-sm leading-7 text-primary md:grid-cols-2">
+              <ul className="mt-6 grid gap-3 text-sm leading-7 text-primary/80 md:grid-cols-2">
                 {experience.description.filter(Boolean).map((item) => (
                   <li key={item} className="flex gap-3">
-                    <FiArrowUpRight className="mt-1.5 shrink-0 text-accent" />
+                    <FiArrowUpRight className="mt-1.5 shrink-0 text-cyan-200" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-6 border-t border-primary/10 pt-5">
+              <div className="mt-6 border-t border-white/10 pt-5">
                 <p className="text-sm font-semibold text-secondary">
                   Tech stack
                 </p>
@@ -111,7 +111,7 @@ export default function WorkPage() {
                   {experience.tech.split(",").map((tech) => (
                     <span
                       key={tech.trim()}
-                      className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-medium text-secondary"
+                      className="rounded-full border border-cyan-200/20 bg-cyan-200/[0.06] px-3 py-1 text-xs font-medium text-cyan-50"
                     >
                       {tech.trim()}
                     </span>

@@ -80,14 +80,14 @@ export default function ProductsPage() {
   };
 
   return (
-    <main className="container mx-auto min-h-screen py-8 md:py-16">
+    <main className="container relative mx-auto min-h-screen py-8 md:py-16">
       <div className="mb-6 max-w-3xl md:mb-10">
-        <p className="font-mono text-xs uppercase text-accent">Products</p>
+        <p className="font-mono text-xs uppercase text-cyan-200">Products</p>
         <h1 className="mt-3 text-4xl font-semibold text-secondary md:text-6xl">
           <span className="md:hidden">Projects</span>
           <span className="hidden md:inline">All products I created</span>
         </h1>
-        <p className="mt-5 hidden text-base leading-8 text-primary md:block">
+        <p className="mt-5 hidden text-base leading-8 text-primary/75 md:block">
           Complete project list, including featured work, private builds, web
           apps, mobile apps, dashboards, and product experiments.
         </p>

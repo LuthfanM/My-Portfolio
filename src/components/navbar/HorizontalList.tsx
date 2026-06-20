@@ -33,7 +33,7 @@ const HorizontalList = ({ mobile = false, onNavigate }: HorizontalListProps) => 
       className={
         mobile
           ? "flex flex-col gap-3 pt-5 text-sm text-primary"
-          : "hidden items-center gap-6 text-sm text-primary md:flex"
+          : "hidden items-center gap-7 text-xs font-medium text-primary/80 md:flex"
       }
     >
       {dataMenus?.map((datamenu, idx) => {
@@ -42,7 +42,7 @@ const HorizontalList = ({ mobile = false, onNavigate }: HorizontalListProps) => 
             <Link
               key={`data-menu-${idx}`}
               href={datamenu.link}
-              className="transition hover:text-accent"
+              className="transition hover:text-cyan-200"
               onClick={onNavigate}
             >
               {datamenu.name}
@@ -55,7 +55,7 @@ const HorizontalList = ({ mobile = false, onNavigate }: HorizontalListProps) => 
             key={`data-menu-${idx}`}
             type="button"
             onClick={() => handleScroll(datamenu.link)}
-            className="text-left transition hover:text-accent"
+            className="text-left transition hover:text-cyan-200"
           >
             {datamenu.name}
           </button>
