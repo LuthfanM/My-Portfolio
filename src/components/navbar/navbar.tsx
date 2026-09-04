@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { BiMenuAltRight, BiX } from "react-icons/bi";
 import HorizontalList from "./HorizontalList";
+import ThemeToggle from "@/components/theme/theme-toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,20 +26,23 @@ export default function Navbar() {
           </h1>
         </Link>
         <HorizontalList />
-        <a
-          href="mailto:mursyidanluthfan@gmail.com"
-          className="hidden rounded-full border border-white/10 bg-white px-5 py-2 text-xs font-semibold text-black shadow-[0_0_24px_rgba(255,255,255,0.18)] transition hover:bg-cyan-100 md:inline-flex"
-        >
-          Contact
-        </a>
-        <button
-          type="button"
-          aria-label="Toggle navigation"
-          onClick={() => setIsOpen((value) => !value)}
-          className="rounded-full border border-white/10 bg-white/5 p-2 text-secondary md:hidden"
-        >
-          {isOpen ? <BiX size={24} /> : <BiMenuAltRight size={24} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="mailto:mursyidanluthfan@gmail.com"
+            className="hidden rounded-full border border-white/10 bg-white px-5 py-2 text-xs font-semibold text-black shadow-[0_0_24px_rgba(255,255,255,0.18)] transition hover:bg-cyan-100 md:inline-flex"
+          >
+            Contact
+          </a>
+          <button
+            type="button"
+            aria-label="Toggle navigation"
+            onClick={() => setIsOpen((value) => !value)}
+            className="rounded-full border border-white/10 bg-white/5 p-2 text-secondary md:hidden"
+          >
+            {isOpen ? <BiX size={24} /> : <BiMenuAltRight size={24} />}
+          </button>
+        </div>
       </div>
       {isOpen && (
         <div className="mx-auto mt-3 max-w-7xl rounded-3xl border border-cyan-100/10 bg-[#030712]/95 px-6 pb-5 shadow-[0_0_35px_rgba(56,189,248,0.12)] backdrop-blur-2xl md:hidden">

@@ -4,6 +4,7 @@ import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { TbBrandWhatsapp } from "react-icons/tb";
 import palmoil from "@images/palmoil.png";
 import courtflow from "@images/courtflow_manager.png";
+import classQuantum from "../../../cq.png";
 
 export const metadata = {
   title: "Luthfan Mursyidan | Frontend & Full-stack Engineer",
@@ -23,6 +24,28 @@ export type Project = {
 };
 
 export const featuredProjects: Project[] = [
+  {
+    name: "Class Quantum",
+    description:
+      "A unified operating platform for schools, tutoring centers, bootcamps, courses, and professional training providers.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Multi-tenant SaaS",
+      "Role-based access",
+      "AI-assisted workflows",
+    ],
+    role: "Product architecture, full-stack development, multi-role workflows, and responsive platform experience.",
+    highlights: [
+      "Learner records, cohorts, and classes",
+      "Attendance, assignments, exams, and gradebook",
+      "Learning reports and organization analytics",
+      "Dedicated educator, learner, family, and owner views",
+    ],
+    image: classQuantum,
+    link: "https://classquantum.org",
+    label: "View live platform",
+  },
   {
     name: "Echo Flow",
     description:

@@ -3,6 +3,15 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
+  --color-base: 248 250 252;
+  --color-base-darker: 241 245 249;
+  --color-primary: 51 65 85;
+  --color-secondary: 15 23 42;
+  --color-accent: 79 70 229;
+}
+
+.dark {
   color-scheme: dark;
   --color-base: 9 6 18;
   --color-base-darker: 18 11 32;
@@ -11,22 +20,23 @@
   --color-accent: 139 92 246;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: dark;
-    --color-base: 9 6 18;
-    --color-base-darker: 18 11 32;
-    --color-primary: 202 190 219;
-    --color-secondary: 250 247 255;
-    --color-accent: 139 92 246;
-  }
-}
-
 body {
   @apply bg-base_col text-primary antialiased;
 }
 
 .web3-site-bg {
+  background-color: rgb(var(--color-base));
+  background-image:
+    radial-gradient(circle at 50% -8%, rgba(99, 102, 241, 0.13), transparent 30rem),
+    radial-gradient(circle at 18% 24%, rgba(14, 165, 233, 0.07), transparent 28rem),
+    radial-gradient(circle at 82% 18%, rgba(99, 102, 241, 0.06), transparent 30rem),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 48%, #f8fafc 100%);
+  background-position: center top, left top, right top, center;
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+.dark .web3-site-bg {
   background-color: #02040a;
   background-image:
     radial-gradient(circle at 50% -8%, rgba(125, 211, 252, 0.24), transparent 30rem),
@@ -53,6 +63,66 @@ body {
     17rem 15rem,
     auto;
   background-attachment: fixed;
+}
+
+.theme-toggle {
+  display: inline-grid;
+  height: 2.25rem;
+  width: 2.25rem;
+  flex: none;
+  place-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgb(148 163 184 / 0.35);
+  background: rgb(255 255 255 / 0.75);
+  color: rgb(var(--color-secondary));
+  transition: border-color 0.2s, transform 0.2s, background-color 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: rgb(var(--color-accent) / 0.55);
+}
+
+.dark .theme-toggle {
+  border-color: rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.05);
+}
+
+/* Light equivalents for the existing glass surfaces; content/layout stays untouched. */
+html:not(.dark) nav,
+html:not(.dark) body > div { color: rgb(var(--color-primary)); }
+
+html:not(.dark) [class*="bg-[#02040a]"],
+html:not(.dark) [class*="bg-[#030712]"] {
+  background-color: rgb(248 250 252 / 0.9) !important;
+}
+
+html:not(.dark) main [class*="bg-white"],
+html:not(.dark) main [class*="bg-black"] {
+  background-color: rgb(255 255 255 / 0.72) !important;
+}
+
+html:not(.dark) [class*="border-white"],
+html:not(.dark) [class*="border-cyan-100"] {
+  border-color: rgb(148 163 184 / 0.28) !important;
+}
+
+html:not(.dark) [class*="text-cyan-100"],
+html:not(.dark) [class*="text-cyan-200"],
+html:not(.dark) [class*="text-cyan-50"] {
+  color: rgb(67 56 202) !important;
+}
+
+html:not(.dark) .hero-stars,
+html:not(.dark) .web3-section::after,
+html:not(.dark) .web3-section-alt::after {
+  opacity: 0.05;
+}
+
+html:not(.dark) .hero-scan,
+html:not(.dark) .web3-section::before,
+html:not(.dark) .web3-section-alt::before {
+  opacity: 0.08;
 }
 
 .hero-stars {
